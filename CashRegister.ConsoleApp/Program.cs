@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 using CashRegister.ConsoleApp.Menu;
 using CashRegister.ConsoleApp.Menu.Actions;
+using CashRegister.ConsoleApp.Models;
 
 
 namespace CashRegister.ConsoleApp;
@@ -12,10 +13,12 @@ class Program
 {
     public static void Main(string[] args)
     {
+        var till = new Till();
+
         var actions = new List<IMenuAction>
         {
-            new StartTransactionAction(),
-            new ViewTillStatusAction(),
+            new StartTransactionAction(till),
+            new ViewTillStatusAction(till),
             new ExitAction() 
         };
 
