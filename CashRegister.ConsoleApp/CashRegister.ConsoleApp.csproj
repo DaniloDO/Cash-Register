@@ -16,4 +16,8 @@
     <ProjectReference Include="..\CashRegister.Infrastructure\CashRegister.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models/" />
+  </ItemGroup>
+
 </Project>

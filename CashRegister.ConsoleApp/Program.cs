@@ -1,21 +1,26 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
+using CashRegister.ConsoleApp.Menu;
+using CashRegister.ConsoleApp.Menu.Actions;
+
 
 namespace CashRegister.ConsoleApp;
 
-class Program 
+class Program
 {
     public static void Main(string[] args)
     {
-        var services = new ServiceCollection(); 
-        //Console UI services
-        services.AddSingleton<App>();
-        services.AddSingleton<Menu.MainMenu>(); 
-        services.AddSingleton<UI.ConsoleReader>(); 
-        services.AddSingleton<UI.ConsoleWriter>();
+        var actions = new List<IMenuAction>
+        {
+            new StartTransactionAction(),
+            new ViewTillStatusAction(),
+            new ExitAction() 
+        };
 
-        using var provider = services.BuildServiceProvider();  
-        provider.GetRequiredService<App>().Run(); 
+        var menuManager = new MenuManager(actions); 
+        menuManager.Run(); 
+
     }
 }

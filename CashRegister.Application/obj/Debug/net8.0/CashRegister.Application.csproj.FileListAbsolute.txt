@@ -1,0 +1,16 @@
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/bin/Debug/net8.0/CashRegister.Application.deps.json
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/bin/Debug/net8.0/CashRegister.Application.dll
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/bin/Debug/net8.0/CashRegister.Application.pdb
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/bin/Debug/net8.0/CashRegister.Domain.dll
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/bin/Debug/net8.0/CashRegister.Domain.pdb
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/CashRegister.Application.csproj.AssemblyReference.cache
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/CashRegister.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/CashRegister.Application.AssemblyInfoInputs.cache
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/CashRegister.Application.AssemblyInfo.cs
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/CashRegister.Application.csproj.CoreCompileInputs.cache
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/CashRegister.Application.sourcelink.json
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/CashRegi.001C6A43.Up2Date
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/CashRegister.Application.dll
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/refint/CashRegister.Application.dll
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/CashRegister.Application.pdb
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/obj/Debug/net8.0/ref/CashRegister.Application.dll
