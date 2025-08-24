@@ -25,7 +25,7 @@ public class ViewTillStatusAction : IMenuAction
         Console.WriteLine("\nTransactions:");
         foreach (var tx in _till.Transactions)
         {
-            Console.WriteLine($"- {tx.CreatedAt:g} | Amount: {tx.Amount} | ID: {tx.Id}");
+            Console.WriteLine($"- {tx.Timestamp:g} | Amount: {tx.Amount}$ | ID: {tx.Id}");
         }
 
         Console.WriteLine("Press Enter to return to menu");

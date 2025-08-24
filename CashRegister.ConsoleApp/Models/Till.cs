@@ -1,4 +1,5 @@
 using System;
+using System.Reflection.Metadata;
 
 namespace CashRegister.ConsoleApp.Models;
 
@@ -8,10 +9,26 @@ public class Till
     public IReadOnlyList<Transaction> Transactions { get => _transactions.AsReadOnly(); }
     public decimal Balance { get; private set; }
 
-    public void AddTransaction(Transaction transaction)
+    public void ApplyTransaction(Transaction transaction)
     {
+        switch (transaction.Type)
+        {
+            case TransactionType.Sale:
+                Balance += transaction.Amount;
+                break; 
+            case TransactionType.Refund:
+                if (transaction.Amount > Balance)
+                {
+                    throw new InvalidOperationException("Insufficient funds in till for refund"); 
+                }
+
+                Balance -= transaction.Amount; 
+                break;
+            default:
+            throw new InvalidOperationException("Unsupported transaction type");
+        }
+
         _transactions.Add(transaction); 
-        Balance += transaction.Amount; 
     }
 
 }

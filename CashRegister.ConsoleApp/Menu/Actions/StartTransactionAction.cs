@@ -1,4 +1,5 @@
 using System;
+using CashRegister.ConsoleApp.Factories;
 using CashRegister.ConsoleApp.Models;
 
 namespace CashRegister.ConsoleApp.Menu.Actions;
@@ -15,18 +16,15 @@ public class StartTransactionAction : IMenuAction
 
     public void Execute()
     {
-        Console.WriteLine("Enter transaction amount: ");
-        string? input = Console.ReadLine();
-        if (decimal.TryParse(input, out var amount))
-        {
-            var transaction = new Transaction(amount);
-            _till.AddTransaction(transaction);
-            Console.WriteLine($"Transaction added, Till balance: {_till.Balance:C}");
-        }
-        else
-        {
-            Console.WriteLine("Invalid amount. Transaction cancelled.");
-        }
+        var factory = new TransactionFactory();
+        var transaction = factory.CreateTransaction(); 
+
+        if (transaction == null)
+            return; 
+            
+        _till.ApplyTransaction(transaction);
+        Console.WriteLine($"Transaction recorded: {transaction.Type} of {transaction.Amount:C} on {transaction.Timestamp}");
+        Console.WriteLine($"Till balance: {_till.Balance:C}");
 
         Console.WriteLine("Press Enter to return to menu");
         Console.ReadLine();
