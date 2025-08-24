@@ -1,5 +1,4 @@
-using System;
-using System.Reflection.Metadata;
+using System.Linq;
 
 namespace CashRegister.ConsoleApp.Models;
 
@@ -29,6 +28,21 @@ public class Till
         }
 
         _transactions.Add(transaction); 
+    }
+
+    public void VoidTransactionAction(Transaction transaction)
+    {
+        if (transaction.Type == TransactionType.Sale)
+        {
+            Balance -= transaction.Amount; 
+        }
+        else if(transaction.Type == TransactionType.Refund)
+        {
+            Balance += transaction.Amount; 
+        }
+
+        _transactions.Remove(transaction); 
+
     }
 
 }

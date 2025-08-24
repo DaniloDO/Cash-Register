@@ -19,13 +19,14 @@ public class ViewTillStatusAction : IMenuAction
         if (!_till.Transactions.Any())
         {
             Console.WriteLine("No transactions recorded yet.");
+            Console.ReadLine();
             return;
         }
 
         Console.WriteLine("\nTransactions:");
         foreach (var tx in _till.Transactions)
         {
-            Console.WriteLine($"- {tx.Timestamp:g} | Amount: {tx.Amount}$ | ID: {tx.Id}");
+            Console.WriteLine($"- {tx.Timestamp:g} | {tx.Type} | Amount: {tx.Amount}$ | ID: {tx.Id}");
         }
 
         Console.WriteLine("Press Enter to return to menu");
