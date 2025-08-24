@@ -1,11 +1,11 @@
 using System;
-using CashRegister.ConsoleApp.Models; 
+using CashRegister.ConsoleApp.Models;
 
 namespace CashRegister.ConsoleApp.Factories;
 
 public class TransactionFactory
 {
-    public Transaction? CreateTransaction()
+    public Transaction? CreateTransaction(Till till)
     {
         Console.WriteLine("Select Transaction Type:");
         Console.WriteLine("1. Sale");
@@ -33,6 +33,18 @@ public class TransactionFactory
             return null;
         }
 
-        return new Transaction(type, amount); 
+        if (type == TransactionType.Refund && amount > till.Balance)
+        {
+            Console.WriteLine("Refund denied. Not enough balance in the till.");
+            return null; 
+        }
+
+        if (amount > 10000)
+        {
+            Console.WriteLine("Transaction exceeds allowed limit.");
+            return null; 
+        }
+
+        return new Transaction(type, amount);
     }
 }

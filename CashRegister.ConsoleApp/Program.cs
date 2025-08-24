@@ -19,6 +19,7 @@ class Program
         {
             new StartTransactionAction(till),
             new ViewTillStatusAction(till),
+            new VoidTransactionAction(till), 
             new ExitAction() 
         };
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CashRegister.ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+621054cfc511292ce9ec65d7bc7e53fa27da0ab5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+125d2473586d362577088dfb40c1452edaf9120f")]
 [assembly: System.Reflection.AssemblyProductAttribute("CashRegister.ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CashRegister.ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

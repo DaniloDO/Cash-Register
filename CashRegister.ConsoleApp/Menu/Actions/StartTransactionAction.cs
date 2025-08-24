@@ -17,7 +17,7 @@ public class StartTransactionAction : IMenuAction
     public void Execute()
     {
         var factory = new TransactionFactory();
-        var transaction = factory.CreateTransaction(); 
+        var transaction = factory.CreateTransaction(_till); 
 
         if (transaction == null)
             return; 
@@ -27,6 +27,6 @@ public class StartTransactionAction : IMenuAction
         Console.WriteLine($"Till balance: {_till.Balance:C}");
 
         Console.WriteLine("Press Enter to return to menu");
-        Console.ReadLine();
+        Console.ReadKey();
     }
 }
