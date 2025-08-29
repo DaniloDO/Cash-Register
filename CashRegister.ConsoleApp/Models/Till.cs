@@ -12,19 +12,19 @@ public class Till
     {
         switch (transaction.Type)
         {
-            case TransactionType.Sale:
+            case TransactionType.Deposit:
                 Balance += transaction.Amount;
                 break; 
-            case TransactionType.Refund:
+            case TransactionType.Withdrawal:
                 if (transaction.Amount > Balance)
                 {
-                    throw new InvalidOperationException("Insufficient funds in till for refund"); 
+                    throw new InvalidOperationException("Insufficient funds in till for withdrawal"); 
                 }
 
                 Balance -= transaction.Amount; 
                 break;
             default:
-            throw new InvalidOperationException("Unsupported transaction type");
+                throw new InvalidOperationException("Unsupported transaction type");
         }
 
         _transactions.Add(transaction); 
@@ -32,11 +32,11 @@ public class Till
 
     public void VoidTransactionAction(Transaction transaction)
     {
-        if (transaction.Type == TransactionType.Sale)
+        if (transaction.Type == TransactionType.Deposit)
         {
             Balance -= transaction.Amount; 
         }
-        else if(transaction.Type == TransactionType.Refund)
+        else if(transaction.Type == TransactionType.Withdrawal)
         {
             Balance += transaction.Amount; 
         }

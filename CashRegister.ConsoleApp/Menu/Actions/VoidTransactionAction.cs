@@ -20,12 +20,14 @@ public class VoidTransactionAction : IMenuAction
         if (string.IsNullOrWhiteSpace(input))
         {
             Console.WriteLine("Invalid input. Operation cancelled.");
+            Console.ReadLine(); 
             return;
         }
 
         if (!Guid.TryParse(input, out Guid transactionId))
         {
             Console.WriteLine("Invalid ID format. Operation cancelled.");
+            Console.ReadLine(); 
             return;
         }
 
@@ -34,6 +36,7 @@ public class VoidTransactionAction : IMenuAction
         if (transaction == null)
         {
             Console.WriteLine("Transaction not found");
+            Console.ReadLine(); 
             return;
         }
 
@@ -48,6 +51,6 @@ public class VoidTransactionAction : IMenuAction
 
         _till.VoidTransactionAction(transaction); 
         Console.WriteLine("Transaction eliminated successfully"); 
-        Console.ReadKey(); 
+        Console.ReadLine(); 
     }
 }

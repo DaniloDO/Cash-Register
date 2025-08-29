@@ -8,21 +8,22 @@ public class TransactionFactory
     public Transaction? CreateTransaction(Till till)
     {
         Console.WriteLine("Select Transaction Type:");
-        Console.WriteLine("1. Sale");
-        Console.WriteLine("2. Refund");
+        Console.WriteLine("1. Deposit");
+        Console.WriteLine("2. Withdrawal");
 
         string? input = Console.ReadLine();
         TransactionType type;
         switch (input)
         {
             case "1":
-                type = TransactionType.Sale;
+                type = TransactionType.Deposit;
                 break;
             case "2":
-                type = TransactionType.Refund;
+                type = TransactionType.Withdrawal;
                 break;
             default:
                 Console.WriteLine("Invalid choice. Transaction cancelled.");
+                Console.ReadLine(); 
                 return null;
         }
 
@@ -33,7 +34,7 @@ public class TransactionFactory
             return null;
         }
 
-        if (type == TransactionType.Refund && amount > till.Balance)
+        if (type == TransactionType.Withdrawal && amount > till.Balance)
         {
             Console.WriteLine("Refund denied. Not enough balance in the till.");
             return null; 
