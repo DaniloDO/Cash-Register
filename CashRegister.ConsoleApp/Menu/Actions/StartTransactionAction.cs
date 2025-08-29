@@ -27,6 +27,6 @@ public class StartTransactionAction : IMenuAction
         Console.WriteLine($"Till balance: {_till.Balance:C}");
 
         Console.WriteLine("Press Enter to return to menu");
-        Console.ReadKey();
+        Console.ReadLine();
     }
 }

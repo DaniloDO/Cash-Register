@@ -2,7 +2,7 @@ namespace CashRegister.ConsoleApp.Models;
 
 public enum TransactionType
 {
-    Sale = 1,
-    Refund = 2
+    Deposit = 1,
+    Withdrawal = 2
 }
 
