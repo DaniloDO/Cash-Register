@@ -1,8 +1,8 @@
 using System;
-using System.Collections.Generic;
-using CashRegister.ConsoleApp.Menu.Actions;
+using CashRegister.Application.Interfaces; 
+using CashRegister.Application.Actions; 
 
-namespace CashRegister.ConsoleApp.Menu;
+namespace CashRegister.ConsoleApp;
 
 public class MenuManager
 {
@@ -44,6 +44,5 @@ public class MenuManager
             }
         }
     }
-
 
 }
