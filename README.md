@@ -21,7 +21,7 @@ Some technical aspects showcased is this project:
   Automatically recalculates and updates after each transaction.  
 
 - **Transaction Management**  
-  Supports sales, refunds, and void operations, with each transaction carrying a unique ID, timestamp, type, and amount.  
+  Supports deposits, withdrawals, and void operations, with each transaction carrying a unique ID, timestamp, type, and amount.  
 
 - **Transaction History**  
   Displays a clear, formatted list of all past activity.  
