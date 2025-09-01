@@ -14,3 +14,5 @@
 /home/danilo/Documents/C#/Cash-Register/CashRegister.Infrastructure/obj/Debug/net8.0/refint/CashRegister.Infrastructure.dll
 /home/danilo/Documents/C#/Cash-Register/CashRegister.Infrastructure/obj/Debug/net8.0/CashRegister.Infrastructure.pdb
 /home/danilo/Documents/C#/Cash-Register/CashRegister.Infrastructure/obj/Debug/net8.0/ref/CashRegister.Infrastructure.dll
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Infrastructure/bin/Debug/net8.0/CashRegister.Application.dll
+/home/danilo/Documents/C#/Cash-Register/CashRegister.Infrastructure/bin/Debug/net8.0/CashRegister.Application.pdb

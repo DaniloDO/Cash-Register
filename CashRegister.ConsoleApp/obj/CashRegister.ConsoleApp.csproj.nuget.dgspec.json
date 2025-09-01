@@ -258,6 +258,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/CashRegister.Application.csproj": {
+                "projectPath": "/home/danilo/Documents/C#/Cash-Register/CashRegister.Application/CashRegister.Application.csproj"
+              },
               "/home/danilo/Documents/C#/Cash-Register/CashRegister.Domain/CashRegister.Domain.csproj": {
                 "projectPath": "/home/danilo/Documents/C#/Cash-Register/CashRegister.Domain/CashRegister.Domain.csproj"
               }
