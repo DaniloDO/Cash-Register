@@ -11,14 +11,16 @@ public static class CompositionRoot
     public static MenuManager BuildApplication()
     {
         var till = new Till();
-        ITillRepository repository = new JsonTillRepository();
+        ITillRepository JsonRepository = new JsonTillRepository();
+        ITillRepository CsvRepository = new CsvTillRepository(); 
 
         var actions = new List<IMenuAction>
         {
             new StartTransactionAction(till), 
             new ViewTillStatusAction(till),
             new VoidTransactionAction(till),
-            new ExportTillToJsonAction(till, repository), 
+            new ExportTillToJsonAction(till, JsonRepository), 
+            new ExportTillToCsvAction(till, CsvRepository),
             new ExitAction()
         }; 
 
