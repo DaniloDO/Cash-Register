@@ -5,9 +5,9 @@ It allows recording deposits, withdraws, voiding transactions, and managing tran
 
 This project is designed with **object-oriented principles** and **scalable architecture in mind** aiming to evolve into a **layered architecture** (Domain, Application, Infrastructure).  
 
-Some technical aspects showcased is this project:
+Some technical aspects to implement in this project:
 - **OOP fundamentals** such as encapsulation, abstraction, and separation of concerns.  
-- Use of **design patterns** like the Factory Pattern to centralize transaction creation.  
+- Use of **design patterns** like the Factory Pattern and Command Pattern.  
 - An **action-based structure**, where each class has a single responsibility (e.g., starting transactions, viewing status, voiding transactions). 
 
 ---
@@ -28,25 +28,6 @@ Some technical aspects showcased is this project:
 
 - **Input Validation**  
   Prevents invalid transaction types and amounts from being processed.  
-
----
-
-## Technical Highlights  
-
-- **Built With:** C# (.NET)  
-
-- **Design Patterns & Principles:**  
-  - **Factory Pattern** for centralized and consistent transaction creation.  
-  - **Command Pattern** for encapsulating each user action as an independent, reusable class.
-  - **Encapsulation** of till balance and transaction history inside `Till`, exposing only what is necessary.  
-  - **Single Responsibility Principle** across actions and domain entities.  
-  - **Read-only transaction list**, ensuring immutability from outside components.  
-
-- **Extensibility**  
-  The architecture makes it simple to:  
-  - Add new **transaction types** by extending the factory.  
-  - Introduce new **menu actions** by implementing a new command class.  
-  - Expand functionality (e.g., reporting, exporting) with minimal changes to existing code.  
 
 ---
 
