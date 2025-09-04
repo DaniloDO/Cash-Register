@@ -1,3 +1,15 @@
+/*
+ The ViewTillStatusAction class provides a menu option for users to view 
+ various reports and summaries of the current Till state.
+
+ Key responsibilities include:
+ - Displaying a Till Summary with the current balance and total number of 
+   transactions.
+ - Calculating and presenting a breakdown of deposits versus withdrawals, 
+   including net cash flow.
+ - Listing all transactions with timestamps, types, amounts, and unique IDs.
+*/
+
 using System;
 using CashRegister.Application.Interfaces;
 using CashRegister.Domain.Models; 

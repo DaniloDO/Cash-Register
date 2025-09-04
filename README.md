@@ -1,12 +1,12 @@
 # CashRegister Console Application  
 
 The CashRegister application is a **console-based system built in C#** that simulates the core functionality of a retail till.  
-It allows recording sales, processing refunds, voiding transactions, and managing transaction history while maintaining an accurate real-time balance.  
+It allows recording deposits, withdraws, voiding transactions, and managing transaction history while maintaining a real-time balance.  
 
-This project is designed with **clean object-oriented principles** and **scalable architecture in mind** aiming to evolve into a **layered architecture** (Domain, Application, Infrastructure).  
+This project is designed with **object-oriented principles** and **scalable architecture in mind** aiming to evolve into a **layered architecture** (Domain, Application, Infrastructure).  
 
 Some technical aspects showcased is this project:
-- Strong **OOP fundamentals** such as encapsulation, abstraction, and separation of concerns.  
+- **OOP fundamentals** such as encapsulation, abstraction, and separation of concerns.  
 - Use of **design patterns** like the Factory Pattern to centralize transaction creation.  
 - An **action-based structure**, where each class has a single responsibility (e.g., starting transactions, viewing status, voiding transactions). 
 
@@ -36,8 +36,8 @@ Some technical aspects showcased is this project:
 - **Built With:** C# (.NET)  
 
 - **Design Patterns & Principles:**  
-  - **Factory Pattern** for centralized and consistent transaction creation (`TransactionFactory`).  
-  - **Command Pattern** for encapsulating each user action as an independent, reusable class (e.g., `StartTransactionAction`, `ViewTillStatusAction`, `VoidTransactionAction`).  
+  - **Factory Pattern** for centralized and consistent transaction creation.  
+  - **Command Pattern** for encapsulating each user action as an independent, reusable class.
   - **Encapsulation** of till balance and transaction history inside `Till`, exposing only what is necessary.  
   - **Single Responsibility Principle** across actions and domain entities.  
   - **Read-only transaction list**, ensuring immutability from outside components.  

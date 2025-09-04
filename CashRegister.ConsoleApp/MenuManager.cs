@@ -1,3 +1,16 @@
+/*
+ The MenuManager is responsible for handling the user interface loop of the 
+ console application. It acts as the controller for all available menu actions, 
+ displaying options, capturing user input, and executing the corresponding 
+ action. 
+
+ Key responsibilities include:
+ - Rendering a menu based on the list of IMenuAction implementations.
+ - Parsing and validating user input for menu navigation.
+ - Coordinating the execution of actions, including special handling for 
+   ExitAction to terminate the application.
+*/
+
 using System;
 using CashRegister.Application.Interfaces; 
 using CashRegister.Application.Actions; 

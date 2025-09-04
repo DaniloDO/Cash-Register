@@ -1,3 +1,17 @@
+/*
+ The CsvTillRepository class provides a CSV-based persistence mechanism 
+ for the Till aggregate. Implements the ITillRepository interface 
+ to support saving Till data in a simple, tabular format (CSV).   
+
+ Key aspects:
+ - Default file path is "till.csv", configurable via constructor.  
+ - Save() builds a local CSV file with a header row and appends each transaction’s 
+   ID, type, amount, and timestamp.  
+ - Data is written asynchronously to improve performance and responsiveness.  
+ - Load() is defined but not yet implemented, reserved for future parsing 
+   of persisted CSV data back into Till objects.  
+*/
+
 using System;
 using System.Text;
 using CashRegister.Application.Interfaces;

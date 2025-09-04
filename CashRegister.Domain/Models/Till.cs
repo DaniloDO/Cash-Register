@@ -1,3 +1,17 @@
+/*
+ The Till class represents the core domain model of the cash register. 
+ It is responsible for tracking the current balance and managing the 
+ collection of transactions that have been applied. 
+
+ Key responsibilities include:
+ - Supporting the register of operations through applying transactions and
+   calculating the current state of the balance. 
+ - Maintaining a read-only transaction history to ensure encapsulation and 
+   prevent external modification. 
+ - Supporting the reversal of operations through the voiding of transactions, 
+   adjusting the balance accordingly. 
+*/
+
 using System;
 
 namespace CashRegister.Domain.Models;
