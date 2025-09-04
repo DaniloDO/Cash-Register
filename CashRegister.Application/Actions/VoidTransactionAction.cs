@@ -1,3 +1,14 @@
+/*
+ The VoidTransactionAction class provides functionality for reversing or 
+removing previously recorded transactions in the Till.  
+
+ Key responsibilities include:
+ - Allowing users to input and validate a transaction ID for voiding.  
+ - Confirming user intent before modifying the Till state.  
+ - Reversing the effects of deposits or withdrawals on the Till balance.  
+ - Removing the specified transaction from the transaction history.  
+*/
+
 using System;
 using CashRegister.Application.Interfaces;
 using CashRegister.Domain.Models; 

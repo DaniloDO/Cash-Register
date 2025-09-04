@@ -1,3 +1,16 @@
+/*
+ The TransactionFactory class encapsulates the process of creating new Transaction 
+ instances based on user input.  
+
+ Key aspects:
+ - Prompts the user to select a transaction type (Deposit or Withdrawal).  
+ - Requests and validates the transaction amount.  
+ - Prevents invalid operations, such as:
+   • Withdrawals exceeding the current till balance.  
+   • Transactions above the maximum allowed threshold (10,000).  
+   • Non-numeric or negative amounts.  
+*/
+
 using System;
 using CashRegister.Domain.Models;
 

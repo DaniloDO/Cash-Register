@@ -1,3 +1,15 @@
+/*
+ The Transaction class represents a single financial operation within the 
+ cash register. 
+
+ Key properties include:
+ - A unique identifier (Id) to distinguish each transaction. 
+ - The type of transaction (deposit or withdrawal) as defined by the 
+   TransactionType enum. 
+ - The amount of money involved, validated to ensure it is greater than zero. 
+ - A timestamp marking when the transaction occurred. 
+*/
+
 using System;
 
 namespace CashRegister.Domain.Models;
