@@ -426,3 +426,12 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# SQLite or other DB files
+*.db
+*.sqlite
+
+# Docker
+*.pid
+*.seed
+
